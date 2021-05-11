@@ -1,0 +1,26 @@
+name: West vancouver Custom Theme
+type: theme
+description: "HTML5, SASS, Responsive grid starter theme - based on Basic"
+package: Core
+core_version_requirement: ^8 || ^9
+
+libraries:
+ - core/normalize
+ - wv_custom_theme/global
+ - wv_custom_theme/fonts
+
+base theme: classy
+
+regions:
+  top_header: "Top Header"
+  header: Header
+  help: Help
+  page_top: "Page top"
+  page_bottom: "Page bottom"
+  breadcrumbs: Breadcrumbs
+  highlighted: Highlighted
+  content: Content
+  sidebar_first: "Sidebar first"
+  sidebar_second: "Sidebar second"
+  sponsors: "Sponsors"
+  footer: Footer

@@ -1,0 +1,1195 @@
+@import "../config/config"
+
+// THEME: purely visual styling (“look-and-feel”) for a component.
+// Read more about SMACSS categorization for Drupal Themes: https://www.drupal.org/node/1887922
+// When following SMCASS, this would be used for dark/light themes (not general styling): https://smacss.com/book/type-theme
+
+// This file is complied separately so we can pull in config dependencies above
+// while also maintaining Drupal's SMACSS structure.
+// @import "theme/theme--light"
+
+/*BRIDGE SPLASH PAGE STYLES*/
+a:hover, a:focus
+  text-decoration: none!important
+
+.bridge-container
+  margin: 0 auto
+  padding: 0
+  width: 100%
+  max-width: 1450px
+  position: relative
+
+img.main-image
+  width: 100%
+  height: 1300px
+  max-height: 1300px
+
+img.mobile-image
+  display: none
+
+img.tablet-image
+  display: none
+
+.front-page-background
+  position: relative
+  &:after
+    content: ""
+    display: block
+
+.breadcrumb
+  padding-top: 15px  
+.breadcrumb li:after
+  content: " \BB "
+
+#breadcrumbs 
+  font-family: Montserrat, Helvetica, Arial, sans-serif
+  font-size: 12px
+  font-weight: 400
+  color: $wvGold
+  letter-spacing: 0.48px
+  max-width: 100em
+  margin-left: auto
+  margin-right: auto
+  margin-left: auto
+  margin-right: auto
+  margin-top: 10px
+  width: auto
+  text-transform: uppercase
+
+.main-image-box 
+  // margin: 0px 0px 0px 50px 
+  // position: absolute
+  // width: 50%
+  // height: auto
+  // top: 0vh
+  position: absolute
+  width: 50%
+  height: 100%
+  top: 30px
+  right: 26%
+  z-index: 20
+    
+.info-box 
+    background: rgba(107, 167, 185, 0.72)
+    padding: 15px
+  
+.info 
+  font-size: 25px
+  text-align: center
+  padding: 20px 0
+  color: #fff
+  .larger-font
+    font-weight: bold
+  p
+    margin: 0
+    padding: 0
+    line-height: 33px
+
+.festival-highlights 
+  text-align: center
+  color: #d89c71
+  font-size: 45px
+  font-weight: bold
+  padding: 20px 0
+  margin: 15px 0
+  background: white
+  transition: 0.8s
+  &:hover
+    background: #003136
+    color: white
+
+// #sponsors 
+//   position: absolute
+//   width: 100%
+//   bottom: 3.5%
+//   h2
+//     text-transform: uppercase
+
+// img.westvan-logo 
+//   position: absolute
+//   bottom: 10px
+//   right: 0
+//   width: 250px
+
+// img.logo-sponsor
+//   display: block
+//   margin: 5px auto
+//   padding: 10px
+
+// img.westvan-logo-mobile
+//   display: none
+  
+// .views-view-grid .views-row
+//   text-align: center
+
+@media (max-width: 1200px)
+  
+  header, h3
+    padding: 10px
+
+  .info
+    font-size: 20px
+  
+  .festival-highlights
+    font-size: 25px 
+
+//   #sponsors 
+//     position: initial
+//     bottom: auto
+
+
+@media (max-width: 920px)
+ 
+  .info
+    font-size: 15px
+    padding: 10px 0px
+  
+  .festival-highlights  
+    font-size: 15px
+    padding: 0px
+
+@media (max-width: 530px)
+
+  .main-image-box 
+    position: initial
+    width: 100%
+    margin: 0
+
+  .info 
+    font-size: 10px
+
+  // .festival-highlights 
+  //   padding: 5px 0
+
+//   #block-wv-bridgefestival-views-block-sponsors-block-1 
+//     margin: 0
+//     h2
+//       text-align: center
+  
+//   #sponsors 
+//     position: initial
+//     bottom: auto
+  
+//   img.westvan-logo 
+//     width: 45%
+//     bottom: 3px
+//     right: 0%
+
+//   img.logo-sponsor
+//     margin: 0
+//     padding: 0
+
+//   img.westvan-logo-mobile
+//     display: initial
+//     position: absolute
+//     bottom: initial
+//     top: 100%
+//     right: 0px
+  
+
+/*END BRIDGE SPLASH PAGE STYLES*/
+
+body
+  background-color: $white
+
+body.page-404.node-page  
+  .page-copy
+    margin: 0
+  .wv-main
+    padding: 0
+
+.t-center
+  text-align: center
+
+header h2 
+  background: $wvLightBlue
+  width: 100%
+  text-transform: uppercase
+  color: $white
+  font-family: $heading-font-family
+  display: block
+  font-size: 20px
+  font-weight: bold
+  padding: 10px
+
+a:link, a:visited
+  color: $wvGold
+  text-decoration: none
+a:hover, a:active
+  text-decoration: underline 
+
+ul.tabs.primary
+  margin: $gutter 0
+  border-bottom: $border-color solid 1px
+  li
+    border: 1px solid $border-color
+    border-bottom: none
+    a:link, a:visited
+      color: $border-color
+      padding: 5px $gutter/3
+      background-color: $wvSidebarGray
+      border: none
+      border-radius: 0
+    a:hover, a:active
+      background-color: $wvLightBlue
+      color: $white
+      text-decoration: none
+      border: none
+      border-radius: 0
+
+.hp-nav
+  visibility: hidden
+  opacity: 0
+  -webkit-transition: opacity 600ms, visibility 600ms
+  transition: opacity 600ms, visibility 600ms
+
+.appear
+  visibility: visible
+  opacity: 1
+
+#header
+  background-color: rgba(107, 167, 185, 0.9)
+  height: 120px
+  padding: 15px 0
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7)
+  -webkit-transition: all 600ms ease
+  transition: all 600ms ease
+  position: fixed
+  z-index: 99
+  width: 100%
+  a:link, a:visited
+    color: $black
+    text-decoration: none
+  a:hover, a:active
+    color: $wvLighterGold
+    text-decoration: none
+  .wvm-logo
+    position: fixed
+    top: 50px
+    width: 420px
+    z-index: 105
+
+#header.sticky
+  position: fixed
+  z-index: 101
+  height: 100px
+  width: 100%
+
+.role--authenticated 
+  #header.sticky
+    position: relative
+    z-index: 101
+    //height: 68px
+    width: 100%
+    .wvm-logo
+      position: relative
+      top: -42px
+      left: 0px
+
+  #header  
+    .wvm-logo
+      position: fixed
+      top: 129px
+      width: 420px
+
+.top-header-btn
+	margin: 7px 0px
+
+.top-header-btn-translate.btn
+  background: transparent
+  border-color: $wvLighterGold
+  height: 40px
+  padding: 6px 14px
+  border-radius: 0
+  font-weight: 600
+  text-transform: none
+  color: $white
+  &:hover
+    color: $wvLightBlue
+    background: $wvLighterGold
+
+.top-header-right
+	float: right
+
+#footer
+  width: 100%
+  margin: 0px
+  padding: 0px
+  // position: absolute
+  // bottom: 0
+  // width: 100%
+  color: $black
+  background-color: $wvLightBlue
+  // background-color: $wvLightBlue
+  // border-top: 2px solid $white
+  .footer-wrapper
+    padding: 10px
+    @include span-columns(12)
+    .col1
+      @include span-columns(2 of 12)
+    .col2
+      @include span-columns(3 of 12)
+    .col3
+      @include span-columns(3 of 12)
+    .col4
+      @include span-columns(2 of 12)
+      .bc-arts
+        margin-right: $gutter
+      .dwv-logo
+        padding-top: 5px
+      .bc-arts:hover, .dwv-logo:hover
+        opacity: 0.5  
+      p.footnote
+        font-size: 10px
+        margin: $gutter/4 0
+    .col5
+      @include span-columns(2 of 12)
+      @include omega()
+  p
+    font-size: 12px
+    line-height: 18px
+  a:link, a:visited
+    color: $white
+  a:hover, a:active  
+    color: $wvGold
+    text-decoration: none
+
+// #main
+//   padding-top: 94px
+
+#main-pages
+  padding-top: 120px
+
+// Footer Front - Start //
+.page-frontpage
+  #main
+    // padding-bottom: 140px
+    // margin-bottom: 355px
+    margin-bottom: 5px
+  #footer
+    box-shadow: none
+    // background: none
+    background-color: $wvLightBlue
+    position: absolute
+    // bottom: 0
+    // height: 140px
+    .footer-wrapper
+      .col4
+        .bc-arts:hover, .dwv-logo:hover
+          opacity: 1.0 
+// Footer Front - End //
+
+.front-page-layout
+  padding-top: $gutter*2
+
+.item-sidebar-wrapper
+  margin: 0px
+  padding: 0px
+  background-color: $wvSidebarGray
+  .item-sidebar-container
+    // background-color: $wvSidebarGray
+    margin: 0 0 $gutter 0
+    padding: 0px 15px 15px 15px
+    ul 
+      margin: 0px $gutter $gutter/3 $gutter
+      padding: 0px
+
+img.mobile-logo
+  display: none
+
+img.dwv-logo.dwv-mobile-logo
+  display: none
+
+img.bc-arts.dwv-mobile-logo
+  display: none
+
+img.bc-arts.dwv-desktop-logo
+    width: 204px
+
+// Main Menu - Start//
+.slicknav_menu
+  display: none
+
+.slicknav_menu .menu-item
+  text-transform: uppercase
+
+#header a.is-active 
+  color: $wvLighterGold
+  border-bottom: 2px solid $wvLighterGold
+
+ul.menu
+  text-align: center
+  position: relative
+  top: 35px
+  float: right
+  li.menu-item
+    display: inline
+    margin-left: 25px
+    text-transform: uppercase
+  li.menu-item:nth-child(1)
+    margin-left: 0px
+
+// Front Menu - Start //
+.front-menu
+  ul.menu
+    padding: $gutter 0 0 0 
+    li.menu-item
+      display: inline
+      float: left
+      padding-right: $gutter
+      a:link, a:visited
+        color: $black
+      a:hover, a:active
+        color: $wvGold
+        text-decoration: none
+    li.menu-item:nth-child(1),
+    li.menu-item:nth-child(2),
+    li.menu-item:nth-child(3)
+      clear: both
+      display: block
+      font-size: 180%
+      padding-bottom: 5px
+    li.menu-item:nth-child(3)
+      padding-bottom: $gutter  
+    li.menu-item:nth-child(4)
+      clear: both
+      diaplay: block
+// Front Menu - End //
+
+//Announcement//
+
+// .announcement-front
+//   background: $wvLightBlue
+//   color: $white
+//   padding: 5px
+//   font-size: 25px
+//   font-weight: bold
+//   border-radius: 5px
+
+.announcement-front
+  margin-left: 5%
+
+//Announcement - End//
+
+
+// Homepage headers //
+h2.home-page-main-title
+  font-size: 32px
+  text-transform: uppercase
+  margin: -4px
+  color: $black
+  background: none
+  padding: 0px
+
+h1.home-page-title
+  font-size: 20px
+  text-transform: lowercase
+
+// Close Homepage headers//
+h1.page-title 
+  text-transform: uppercase
+
+h2
+ font-family: Montserrat, Helvetica, Arial, sans-serif
+ color: $wvGreen
+ font-size: 23px
+ font-weight: 575
+ letter-spacing: 0.48px
+ line-height: 24px
+ margin-top: 20px
+
+
+h1.main-page-title
+  font-family: Montserrat, Helvetica, Arial, sans-serif
+  color: $wvGreen
+  text-transform: uppercase
+  font-size: 30px
+  font-weight: 700
+  letter-spacing: 0.8px
+  line-height: 48px
+
+
+h3.sidebar-page-title 
+  font-family:Montserrat, Helvetica, Arial, sans-serif
+  font-size: 18px
+  font-weight: 525
+  color: $wvGreen
+  letter-spacing: 0.48px
+  line-height: 24px
+  padding: 10px 0px 5px 10px
+  margin: 0
+
+h3.page-title 
+  font-family:Montserrat, Helvetica, Arial, sans-serif
+  font-size: 18px
+  font-weight: 525
+  color: $wvGreen
+  letter-spacing: 0.48px
+  line-height: 24px
+  margin: 40px 0px 0px 0px
+
+
+h2.subtitle
+  margin: 0
+  font-size: 120%
+  font-weight: normal
+
+.footnote-homepage
+  background: rgba(255,255,255,0.5)
+  padding: 30px 30px 30px 90px
+  float: right
+  position: absolute
+  top: 0%
+  left: 0%
+  z-index: 51
+  font-size: 120%
+
+.page-top-image
+  margin: 0px
+  padding: 0px
+  width: 100vw
+  position: relative
+  left: 49.5%
+  right: 49.5%
+  margin-left: -50vw
+  margin-right: -50vw
+  overflow: hidden
+  .footnote
+    background: rgba(255, 255, 255, 0.5)
+    padding: $gutter $gutter $gutter $gutter*3
+    float: right
+    position: absolute
+    bottom: 0
+    right: 0
+    z-index: 10
+    font-size: 120%
+  img
+    width: 100%
+    height: 100%
+
+.break
+  margin: 0 0 0 0
+  padding: 0
+  width: 100%
+  height: 15px
+  background: transparent url("../../images/bg-div-1359x15.png") 0% 50% no-repeat  
+
+.content-hp
+  .hp-slideshow
+    min-height: 100%
+    min-width: 1272px
+    width: 100% !important
+    height: auto !important
+    position: fixed
+    top: 0
+    left: 0
+    z-index: -9999
+    img.slide-bg
+      min-height: 100%
+      min-width: 1272px
+      width: 100% !important
+      height: auto !important
+      position: fixed
+      top: 0
+      left: 0
+      z-index: -9999
+
+.views-slideshow-controls-bottom .views-slideshow-pager-bullets
+  position: absolute
+  bottom: 10px
+  left: 50%
+  z-index: 15
+  width: 60%
+  margin-left: -30%
+  padding-left: 0
+  list-style: none
+  text-align: center
+
+#cycle-prev, #cycle-next
+  z-index: 80 !important
+
+//EDIT HOMEPAGE DATE
+
+.hp-date
+  text-align: center
+  margin-top: 2em
+  margin-bottom: 2em
+
+h4.hp-title
+  background: $wvLightBlue
+  color: $white
+h4.hp-title:hover
+  background: $wvGold
+
+.hp-list
+  margin-bottom: 2em
+
+
+
+
+//END HOMEPAGE DATE
+
+.expand-collapse
+  margin: 0 0 $gutter/3 0
+  padding: 0px
+  border-top: $border-color 3px solid
+  background-color: $wvSidebarGray
+  .ec-title
+    margin: 0
+    padding: $gutter/3 $gutter*2
+    font-size: 18px
+    background: transparent url("../../images/icon-expand.png") 0 18px no-repeat
+  .ec-title.expanded
+    background: transparent url("../../images/icon-collapse2.png") 0 18px no-repeat
+  .ec-title:hover
+    cursor: pointer
+  .ec-body
+    margin: $gutter/3 $gutter $gutter/3 $gutter*2
+    padding-bottom: $gutter
+    .ec-image
+      float: right
+      margin: 0 0 $gutter/3 $gutter/3
+
+.wv-collections-block
+  @include outer-container
+  margin-top: $gutter
+  .views-row
+    @include span-columns(4 of 8)
+    h1.page-title
+      a:link, a:visited
+        text-decoration: none
+        color: $dark-gray
+      a:hover, a:active
+        text-decoration: none
+        color: $wvLightBlue
+    img
+      margin-bottom: 15px
+
+.node-page
+  .page-image
+    img
+      margin-bottom: $gutter
+  .page-copy
+    margin-bottom: $gutter
+
+.node-exhibition
+  .page-copy
+    clear: both 
+    padding-top: $gutter
+
+.wv-wrapper
+  padding-top: $gutter*1.5
+  @include outer-container(100%)
+
+.wv-main
+  padding-bottom: $gutter
+  ul
+    margin: $gutter/2 $gutter*2
+    li
+      list-style: circle
+      padding-bottom: $gutter/3
+  .thumbnail-display
+    margin-bottom: $gutter
+    content: ""
+    clear: both
+    display: table
+    ul
+      margin: 0
+      li
+        padding: $gutter/3 $gutter/3 0 0 
+        list-style: none
+        display: block
+        float: left
+        a
+          text-decoration: none
+
+.content.wv-wrapper.teaser-wrapper
+  padding: 0px
+
+.wv-main.grid-8
+  @include span-columns(8)
+  @include shift(2)
+
+.wv-main.grid-6
+  @include span-columns(6) 
+  
+.wv-main.grid-6.future-content
+  margin-top: 4em
+
+.wv-main.grid-10
+  @include span-columns(12)
+  // @include shift(1)
+  .wv-body.grid-7
+    @include span-columns(9 of 12)
+    margin-top: 10px
+  .wv-sidebar.grid-3
+    @include span-columns(3 of 12)
+
+// Exhibitions Page - START //
+.page-exhibitions
+  .block-region-middle
+    .block-views:nth-of-type(2)
+      @include span-columns(8)
+      @include shift(2)
+    .block-views:nth-of-type(3)
+      @include span-columns(8)
+      @include shift(2)
+      //margin-top: $gutter
+      margin-bottom: $gutter
+    .block-views
+      h2
+        margin: 0px
+        padding: 0px
+        font-size: 32px
+      h2.subtitle
+        font-size: 24px
+      h1
+        font-size: 24px
+        a:link, a:visited
+          color: $base-font-color
+        a:hover, a:active   
+          color: $wvLightBlue
+          text-decoration: none
+
+.exhibitions-future
+  @include outer-container
+  header
+    h2
+      margin: 0
+      padding: 0
+  .views-row
+    margin-bottom: $gutter
+    .wv-wrapper
+      margin: 0
+      padding: 0
+      .wv-main
+        padding: 0px
+        margin: 0px
+        width: 100%
+        .page-image
+          margin-bottom: $gutter/2
+
+.past-exhibition-wrapper
+  margin: 0 0 $gutter/3 0
+  padding: 18px $gutter 18px $gutter*2
+  border-top: $border-color 3px solid
+  background: url("../../images/icon-expand.png") 0 18px no-repeat
+  h3
+    font-size: 18px
+    cursor: pointer
+    margin: 0px
+    padding: 0px
+  ul.past-exhibition
+    padding: 0 $gutter
+.past-exhibition-wrapper.expanded
+  background: url("../../images/icon-collapse2.png") 0 18px no-repeat
+// Exhibitions Page - END //
+
+// Event and Programs - START //
+
+.page-image img 
+  margin: 0 auto
+  display: block
+
+.views-col.col-1, .views-col.col-2 
+  padding: 0px 15px
+
+.views-col.col-1 .views-field.views-field-name span.field-content a
+  line-height: 1.3
+  margin: 0 0 0.75em
+  font-size: 24px
+  font-weight: bold
+  text-transform: uppercase
+
+.views-col.col-2 .views-field.views-field-name span.field-content a
+  line-height: 1.3
+  margin: 0 0 0.75em
+  font-size: 24px
+  font-weight: bold
+  text-transform: uppercase
+
+.views-col.col-1 .views-field.views-field-description__value span.field-content p
+  padding: 10px 0px
+
+.views-col.col-2 .views-field.views-field-description__value span.field-content p
+  padding: 10px 0px
+
+// Event and Programs - END //
+
+
+// Link Icons - Start //
+
+.page-copy span.link
+  margin: 0 -25px 0 0
+  padding: 1px 25px 
+  height: 20px
+  width: 20px
+
+.btn-dwv.btn-pdf 
+  background: transparent url(/themes/custom/wv_bridgefestival/images/icons/pdf-gold.png) no-repeat
+
+.page-copy, .ec-body, .item-sidebar-container
+  a:link, a:visited
+    text-decoration: underline
+    color: $wvGold
+    span.link
+      margin: 0 10px 0 0
+      padding: 1px 25px
+      height: 20px
+      width: 20px
+      word-wrap: break-word
+      background: transparent url("../../images/icons/img-sprites-400x80.png") 0 0 no-repeat
+    span.link-link
+      background: transparent url("../../images/icons/dab-gold.png") no-repeat
+      width: auto
+      height: 24px
+    span.link-file
+      background: transparent url("../../images/icons/file-gold.png") no-repeat
+      width: auto
+      height: 24px
+    span.link-pdf
+      background: transparent url("../../images/icons/pdf-gold.png") no-repeat
+      width: auto
+      height: 24px
+    span.link-twitter
+      background: transparent url("../../images/icons/twitter-gold.png") no-repeat
+      width: auto
+      height: 24px
+    span.link-fb
+      background: transparent url("../../images/icons/fb-gold.png") no-repeat
+      width: auto
+      height: 24px
+    span.link-email
+      background: transparent url("../../images/icons/email-gold.png") no-repeat
+       width: auto
+      height: 24px
+    span.link-phone
+      background: transparent url("../../images/icons/phone-gold.png") no-repeat
+      width: auto
+      height: 24px
+    span.link-youtube
+      background: transparent url("../../images/icons/yt-gold.png") no-repeat
+      width: auto
+      height: 24px
+    span.link-instagram
+      background: transparent url("../../images/icons/instagram-gold.png") no-repeat
+      width: auto
+      height: 24px
+    span.link-flickr
+      background: transparent url("../../images/icons/flickr-gold.png") no-repeat
+      width: auto
+      height: 24px
+  a:hover, a:active
+    color: $wvGreen
+    span.link-link
+      background: transparent url("../../images/icons/dab-dg.png") no-repeat
+    span.link-file
+      background: transparent url("../../images/icons/file-dg.png") no-repeat
+    span.link-pdf
+      background: transparent url("../../images/icons/pdf-dg.png") no-repeat
+    span.link-twitter
+      background: transparent url("../../images/icons/twitter-dg.png") no-repeat
+    span.link-fb
+      background: transparent url("../../images/icons/fb-dg.png") no-repeat
+    span.link-email
+      background: transparent url("../../images/icons/email-dg.png") no-repeat
+    span.link-phone
+      background: transparent url("../../images/icons/phone-dg.png") no-repeat
+    span.link-youtube
+      background: transparent url("../../images/icons/yt-dg.png") no-repeat
+    span.link-instagram
+      background: transparent url("../../images/icons/instagram-dg.png") no-repeat 
+    span.link-flickr
+      background: transparent url("../../images/icons/flickr-dg.png") no-repeat   
+
+.ec-body a
+  &:hover
+    color: $wvGreen !important
+
+span.out-of-stock
+  color: $wvLightBlue
+  font-style: italic
+  opacity: 0.7
+  text-decoration: line-through
+
+.icon
+  padding: 0px 25px
+  display: block
+
+span.link-link
+  background: transparent url("../../images/icons/dab-gold.png") no-repeat
+  &:hover
+    background: transparent url("../../images/icons/dab-dg.png") no-repeat
+span.icon.link-file
+  background: transparent url("../../images/icons/file-gold.png") no-repeat
+  &:hover
+    background: transparent url("../../images/icons/file-dg.png") no-repeat
+span.icon.link-pdf
+  background: transparent url("../../images/icons/pdf-gold.png") no-repeat
+  &:hover
+    background: transparent url("../../images/icons/pdf-dg.png") no-repeat
+span.icon.link-twitter
+  background: transparent url("../../images/icons/twitter-gold.png") no-repeat
+  &:hover
+    background: transparent url("../../images/icons/twitter-dg.png") no-repeat
+span.icon.link-fb
+  background: transparent url("../../images/icons/fb-gold.png") no-repeat
+  &:hover
+    background: transparent url("../../images/icons/fb-dg.png") no-repeat
+span.icon.link-email
+  background: transparent url("../../images/icons/email-gold.png") no-repeat
+  &:hover
+    background: transparent url("../../images/icons/email-dg.png") no-repeat
+span.icon.link-phone
+  background: transparent url("../../images/icons/phone-gold.png") no-repeat
+  &:hover
+    background: transparent url("../../images/icons/phone-dg.png") no-repeat
+span.icon.link-youtube
+  background: transparent url("../../images/icons/yt-gold.png") no-repeat
+  &:hover
+    background: transparent url("../../images/icons/yt-dg.png") no-repeat
+span.icon.link-instagram
+  background: transparent url("../../images/icons/instagram-gold.png") no-repeat 
+  &:hover
+    background: transparent url("../../images/icons/instagram-dg.pnginstagram-gold.png") no-repeat
+
+// Link Icons - End //
+
+// Icons - Start //
+.btn-dwv, .btn-bottom-dwv
+  margin: 0 10px 0 0
+  padding: 0 
+  float: left
+  display: block
+  height: 25px
+  width: 25px
+  background: transparent url("../../images/img-sprites-400x80.png") 0 0 no-repeat
+
+.social-icons
+  margin-top: 10px
+
+.item-sidebar-container, .ec-body
+  a
+    text-decoration: none
+    color: $wvDarkGrayText
+    .btn-link
+      background: transparent url("../../images/icons/dab-gold.png") no-repeat
+    .btn-file
+      background: transparent url("../../images/icons/file-gold.png") -20px -40px no-repeat
+    .btn-pdf
+      background: transparent url("../../images/icons/pdf-gold.png") no-repeat
+    .btn-twitter
+      background: transparent url("../../images/icons/twitter-gold.png") no-repeat
+    .btn-fb
+      background: transparent url("../../images/icons/fb-gold.png") no-repeat
+    .btn-email
+      background: transparent url("../../images/icons/email-gold.png") no-repeat
+    .btn-phone
+      background: transparent url("../../images/icons/phone-gold.png") no-repeat
+    .btn-youtube
+      background: transparent url("../../images/icons/yt-gold.png") -140px -40px no-repeat
+    .btn-instagram
+      background: transparent url("../../images/icons/instagram-gold.png") no-repeat
+    .btn-flickr
+      background: transparent url("../../images/icons/flickr-gold.png") no-repeat
+  a:hover
+    color: $wvGold
+    .btn-link
+      background: transparent url("../../images/icons/dab-dg.png") no-repeat
+    .btn-file
+      background: transparent url("../../images/icons/file-dg.png") -20px -20px no-repeat
+    .btn-pdf
+      background: transparent url("../../images/icons/pdf-dg.png") no-repeat
+    .btn-twitter
+      background: transparent url("../../images/icons/twitter-dg.png") no-repeat
+    .btn-fb
+      background: transparent url("../../images/icons/fb-dg.png") no-repeat
+    .btn-email
+      background: transparent url("../../images/icons/email-dg.png") no-repeat
+    .btn-phone
+      background: transparent url("../../images/icons/phone-dg.png") no-repeat
+    .btn-youtube
+      background: transparent url("../../images/icons/yt-dg.png") -140px -20px no-repeat
+    .btn-instagram
+      background: transparent url("../../images/icons/instagram-dg.png") no-repeat 
+    .btn-flickr
+      background: transparent url("../../images/icons/flickr-dg.png") no-repeat   
+
+//footer sponsors//
+
+#sponsors
+  // border-top: 3px solid $wvGold 
+  padding: 10px 0px
+  margin: 10px 0px
+
+#block-wv-bridgefestival-views-block-sponsors-block-1 
+  text-align: center
+  display: inline-block
+  width: 100%
+  height: auto
+  background-color: rgba(255,255,255, 1)
+  // position: absolute
+  // bottom: 105px
+		.views-row
+  		display: inline-block
+  		padding: 0px 25px 0px 25px
+  h2
+    text-align: left
+    margin: 10px
+    color: $white
+
+//EDIT PAVILLIONS
+
+.views-field.views-field-field-welcome 
+  background: $wvLightBlue
+  color: $white
+  padding: 3px
+
+.views-field.views-field-title
+  border-bottom: 1px solid $wvLightBlue
+  a
+    font-weight: bold
+  a:hover
+    color: $wvGold
+
+
+//END EDIT PAVILLIONS
+
+
+#footer
+    .col5
+    a:link, a:visited
+      text-decoration: underline
+      color: $wvLighterGold
+      font-size: 12px
+      .btn-link
+        background: transparent url("../../images/icons/subscribe-white.png") no-repeat
+      .btn-file
+        background: transparent url("../../images/icons/circle-icons/white-file.svg") no-repeat
+      .btn-pdf
+        background: transparent url("../../images/icons/pdf-white.png") no-repeat
+      .btn-twitter
+        background: transparent url("../../images/icons/white-twitter-circle-3.png") no-repeat
+      .btn-fb
+        background: transparent url("../../images/icons/white-facebook-circle-2.png") no-repeat
+      .btn-instagram
+        background: transparent url("../../images/icons/white-instagram-circle-3.png") no-repeat
+      .btn-email
+        background: transparent url("../../images/icons/circle-icons/email-white-circle.svg") no-repeat
+      .btn-phone
+        background: transparent url("../../images/icons/circle-icons/phone-white-circle.svg") no-repeat
+      .btn-youtube
+        background: transparent url("../../images/icons/circle-icons/white-youtube.svg") no-repeat
+    a:hover, a:active
+      opacity: 1
+      text-decoration: none
+      color: $wvGreen
+      .btn-link
+        background: transparent url("../../images/icons/subscribe-light-gold.png") no-repeat
+      .btn-file
+        background: transparent url("../../images/icons/subscribe-light-gold.png") no-repeat
+      .btn-pdf
+        background: transparent url("../../images/icons/pdf-light-gold") no-repeat
+      .btn-twitter
+        background: transparent url("../../images/icons/twitter-light-gold.png") no-repeat
+      .btn-fb
+        background: transparent url("../../images/icons/fb-light-gold.png") no-repeat
+      .btn-instagram
+        background: transparent url("../../images/icons/instagram-light-gold.png") no-repeat
+      .btn-email
+        background: transparent url("../../images/icons/email-light-gold.png") no-repeat
+      .btn-phone
+        background: transparent url("../../images/icons/phone-light-gold.png") no-repeat
+      .btn-youtube
+        background: transparent url("../../images/icons/circle-icons/yt-light-gold.png") no-repeat
+// Icons - End //
+
+.contact-form
+  margin: $gutter 0
+
+input[type="submit"]
+  background-color: $wvLightBlue
+
+input[type="submit"]:hover,
+input[type="submit"]:focus
+  background-color: $wvDarkGrayText
+
+.page-user
+  #main
+    margin-bottom: $gutter
+// Exhibition Buttons - Start //
+.exhibition-nav
+  margin: $gutter*2 0
+  p
+    a.btn-link
+      background-color: $wvDarkGrayText
+      color: #ffffff
+      padding: $gutter/2 $gutter
+      border-radius: 4px
+    a.btn-link:hover
+      background-color: $wvLightBlue
+
+// Exhibition Buttons - End //
+
+// Envoke - Custom Styles - Start //
+#e7501d2e8c3325b619ead086e19f011b 
+  .nvkFormItem.nvkSubmitButton
+    margin: 0
+    padding: 34px 20px
+    .btn.btn-default
+      background-color: $wvDarkGrayText
+      background-image: none
+      height: 36px
+      width: 100%
+      margin: 0
+      padding: 0
+      color: #ffffff 
+    .btn.btn-default:hover
+      background-color: $wvLightBlue
+      color: #ffffff
+
+#ee5a6b7c9a38d23874a722360c57cfb4   
+  .nvkFormItem.nvkSubmitButton
+    margin: 0
+    padding: 34px 0px
+    .btn.btn-default
+      background-color: $wvDarkGrayText
+      background-image: none
+      height: 36px
+      width: 30%
+      margin: 0
+      padding: 0
+      color: #ffffff 
+    .btn.btn-default:hover
+      background-color: $wvLightBlue
+      color: #ffffff      
+
+// Envoke - Custom Styles - End //
+
+#colorbox
+  padding: $gutter/2 
+  img
+    width: 100%
+
+.image-hover-effect
+  position: relative
+  //width: 50%
+  img
+    opacity: 1
+    height: auto
+    transition: .5s ease
+    backface-visibility: hidden
+  .hover-bg
+    transition: .5s ease
+    opacity: 0
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+
+.image-hover-effect:hover
+  img
+    opacity: 0.3
+  .hover-bg
+    opacity: 1
